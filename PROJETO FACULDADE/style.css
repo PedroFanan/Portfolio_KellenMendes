@@ -1,0 +1,384 @@
+
+/*  ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: 19px;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(109, 22, 160);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(109, 22, 160);;
+}
+
+button:hover, form .btn-enviar input:hover{
+    color: white;
+    box-shadow: 0px 0px 8px rgba(109, 22, 160, 0.788);
+    transform: scale(1.09);
+    transition: .2s;
+    
+}
+
+/*ESTILO DO CABEÇALHO*/
+
+header{
+    padding: 10px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(99, 96, 96);
+    text-decoration: none;
+    display: block;
+    
+      
+}
+
+header nav ul{
+    list-style-type: none;
+
+}header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+    
+
+}
+
+header a:hover{
+    color: white;
+    transform: scale(1.09);
+}
+
+
+/* ESTILO DO TOPO DO SITE*/
+
+section.topo-do-site{
+    padding: 20px 4%;
+}
+
+
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+}
+.topo-do-site p{
+    color: white;
+    margin: 40px 0;
+    box-sizing: content-box;
+    font-size: 20px;
+}
+
+.topo-do-site span{
+    color: rgb(109, 22, 160);
+
+}
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: Flutuando 2s ease-in-out infinite alternate;
+}
+
+@keyframes Flutuando {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* MINHAS FORMAÇÕES*/
+
+section.Minhas_Formações h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25vh;
+    
+}
+
+section.Minhas_Formações{
+    padding: 20px 4%;
+}
+
+section.Minhas_Formações .flex{
+    gap: 60px;
+}
+
+.Minhas_Formações .formações-box{
+    color: white;
+    padding: 5px;
+    border:0;
+    border-radius:5px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.Minhas_Formações .formações-box:hover{
+    transform: sacale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.473);
+}
+
+.Minhas_Formações .formações-box i{
+    font-size: 70px;
+    color: rgb(109, 22, 160);
+}
+
+.Minhas_Formações .formações-box p{
+    margin: 10px 0;
+    text-align: justify;
+}
+.Sobre .txt-sobre p{
+    margin: 10px 0;
+    text-align: justify;
+}
+
+/*ESTILO SOBRE*/
+
+section.Sobre{
+    padding: 80px 4%;
+}
+
+section.Sobre .flex{
+    align-items: center;
+    gap: 60px;
+
+}
+
+.Sobre .txt-sobre{
+    color: white;
+
+}
+
+.Sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.Sobre .txt-sobre h2 span{
+    color: rgb(109, 22, 160);
+    display: block;
+}
+
+.Sobre .txt-sobre p{
+    margin: 10px 0;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(109, 22, 160);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.Portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.096);
+    
+}
+
+section.Portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 6s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+
+
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+    
+    
+}
+
+.Portfolio .CATEGORIA button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(109, 22, 160);
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    margin: 10px auto;
+    
+    
+}
+
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.Formulário{
+    padding: 80px 4%;
+
+
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    width: 120px;
+    background-color: rgb(109, 22, 160);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0px 0px 8px rgba(109, 22, 160, 0.788);
+    margin: 30px;
+    
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer p i{
+    color: rgba(109, 22, 160, 0.788);
+    font-size: 35px;
+
+}
+
+footer .line-footer p a{
+    color: white;
+}
+.borda{
+    border-top: 2px solid rgba(109, 22, 160, 0.788);;
+}
+
+
+/* SITE RESPONSIVO */
+
+@media screen and (max-width: 1020px){
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction: column;
+    }
+    /*CABEÇALHO*/
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+}
